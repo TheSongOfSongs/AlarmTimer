@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DC67568247545A00078F68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC67567247545A00078F68B /* AppDelegate.swift */; };
+		4DC6756A247545A00078F68B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC67569247545A00078F68B /* SceneDelegate.swift */; };
+		4DC6756C247545A00078F68B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6756B247545A00078F68B /* MainViewController.swift */; };
+		4DC6756F247545A00078F68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6756D247545A00078F68B /* Main.storyboard */; };
+		4DC67571247545A40078F68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC67570247545A40078F68B /* Assets.xcassets */; };
+		4DC67574247545A40078F68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC67572247545A40078F68B /* LaunchScreen.storyboard */; };
+		4DC67581247555E50078F68B /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6757E247555D90078F68B /* NotoSansKR-Black.otf */; };
+		4DC67582247555E70078F68B /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6757C247555D90078F68B /* NotoSansKR-Bold.otf */; };
+		4DC67583247555EA0078F68B /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6757F247555D90078F68B /* NotoSansKR-Light.otf */; };
+		4DC67584247555ED0078F68B /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6757D247555D90078F68B /* NotoSansKR-Medium.otf */; };
+		4DC67585247555EF0078F68B /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC67580247555D90078F68B /* NotoSansKR-Thin.otf */; };
+		4DC675872475721D0078F68B /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC67586247572140078F68B /* NotoSansKR-Regular.otf */; };
+		4DC6758A24763DDA0078F68B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6758924763DDA0078F68B /* TableViewController.swift */; };
+		4DC6758C24763E340078F68B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6758B24763E340078F68B /* CalendarViewController.swift */; };
+		4DC6758E247642920078F68B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6758D247642920078F68B /* ContainerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4DC67564247545A00078F68B /* MyAlarmTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlarmTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC67567247545A00078F68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DC67569247545A00078F68B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4DC6756B247545A00078F68B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4DC6756E247545A00078F68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DC67570247545A40078F68B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DC67573247545A40078F68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DC67575247545A40078F68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC6757C247555D90078F68B /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "Font/NotoSansKR-Bold.otf"; sourceTree = SOURCE_ROOT; };
+		4DC6757D247555D90078F68B /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "Font/NotoSansKR-Medium.otf"; sourceTree = SOURCE_ROOT; };
+		4DC6757E247555D90078F68B /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Black.otf"; path = "Font/NotoSansKR-Black.otf"; sourceTree = SOURCE_ROOT; };
+		4DC6757F247555D90078F68B /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Light.otf"; path = "Font/NotoSansKR-Light.otf"; sourceTree = SOURCE_ROOT; };
+		4DC67580247555D90078F68B /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.otf"; path = "Font/NotoSansKR-Thin.otf"; sourceTree = SOURCE_ROOT; };
+		4DC67586247572140078F68B /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "Font/NotoSansKR-Regular.otf"; sourceTree = SOURCE_ROOT; };
+		4DC6758924763DDA0078F68B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4DC6758B24763E340078F68B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4DC6758D247642920078F68B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DC67561247545A00078F68B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DC6755B247545A00078F68B = {
+			isa = PBXGroup;
+			children = (
+				4DC67566247545A00078F68B /* MyAlarmTimer */,
+				4DC67565247545A00078F68B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DC67565247545A00078F68B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DC67564247545A00078F68B /* MyAlarmTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DC67566247545A00078F68B /* MyAlarmTimer */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6758824763DC10078F68B /* Main */,
+				4DC6757B247555B40078F68B /* Font */,
+				4DC67567247545A00078F68B /* AppDelegate.swift */,
+				4DC67569247545A00078F68B /* SceneDelegate.swift */,
+				4DC6756D247545A00078F68B /* Main.storyboard */,
+				4DC67570247545A40078F68B /* Assets.xcassets */,
+				4DC67572247545A40078F68B /* LaunchScreen.storyboard */,
+				4DC67575247545A40078F68B /* Info.plist */,
+			);
+			path = MyAlarmTimer;
+			sourceTree = "<group>";
+		};
+		4DC6757B247555B40078F68B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6757E247555D90078F68B /* NotoSansKR-Black.otf */,
+				4DC6757C247555D90078F68B /* NotoSansKR-Bold.otf */,
+				4DC6757F247555D90078F68B /* NotoSansKR-Light.otf */,
+				4DC6757D247555D90078F68B /* NotoSansKR-Medium.otf */,
+				4DC67580247555D90078F68B /* NotoSansKR-Thin.otf */,
+				4DC67586247572140078F68B /* NotoSansKR-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4DC6758824763DC10078F68B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6756B247545A00078F68B /* MainViewController.swift */,
+				4DC6758924763DDA0078F68B /* TableViewController.swift */,
+				4DC6758B24763E340078F68B /* CalendarViewController.swift */,
+				4DC6758D247642920078F68B /* ContainerViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DC67563247545A00078F68B /* MyAlarmTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC67578247545A40078F68B /* Build configuration list for PBXNativeTarget "MyAlarmTimer" */;
+			buildPhases = (
+				4DC67560247545A00078F68B /* Sources */,
+				4DC67561247545A00078F68B /* Frameworks */,
+				4DC67562247545A00078F68B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyAlarmTimer;
+			productName = MyAlarmTimer;
+			productReference = 4DC67564247545A00078F68B /* MyAlarmTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DC6755C247545A00078F68B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Jinhyang;
+				TargetAttributes = {
+					4DC67563247545A00078F68B = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 4DC6755F247545A00078F68B /* Build configuration list for PBXProject "MyAlarmTimer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DC6755B247545A00078F68B;
+			productRefGroup = 4DC67565247545A00078F68B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DC67563247545A00078F68B /* MyAlarmTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DC67562247545A00078F68B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC67583247555EA0078F68B /* NotoSansKR-Light.otf in Resources */,
+				4DC675872475721D0078F68B /* NotoSansKR-Regular.otf in Resources */,
+				4DC67574247545A40078F68B /* LaunchScreen.storyboard in Resources */,
+				4DC67584247555ED0078F68B /* NotoSansKR-Medium.otf in Resources */,
+				4DC67571247545A40078F68B /* Assets.xcassets in Resources */,
+				4DC67585247555EF0078F68B /* NotoSansKR-Thin.otf in Resources */,
+				4DC6756F247545A00078F68B /* Main.storyboard in Resources */,
+				4DC67581247555E50078F68B /* NotoSansKR-Black.otf in Resources */,
+				4DC67582247555E70078F68B /* NotoSansKR-Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DC67560247545A00078F68B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC6758C24763E340078F68B /* CalendarViewController.swift in Sources */,
+				4DC6756C247545A00078F68B /* MainViewController.swift in Sources */,
+				4DC67568247545A00078F68B /* AppDelegate.swift in Sources */,
+				4DC6758A24763DDA0078F68B /* TableViewController.swift in Sources */,
+				4DC6758E247642920078F68B /* ContainerViewController.swift in Sources */,
+				4DC6756A247545A00078F68B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4DC6756D247545A00078F68B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DC6756E247545A00078F68B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DC67572247545A40078F68B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DC67573247545A40078F68B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DC67576247545A40078F68B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DC67577247545A40078F68B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DC67579247545A40078F68B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyAlarmTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.Jinhyang.MyAlarmTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4DC6757A247545A40078F68B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyAlarmTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.Jinhyang.MyAlarmTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DC6755F247545A00078F68B /* Build configuration list for PBXProject "MyAlarmTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC67576247545A40078F68B /* Debug */,
+				4DC67577247545A40078F68B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC67578247545A40078F68B /* Build configuration list for PBXNativeTarget "MyAlarmTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC67579247545A40078F68B /* Debug */,
+				4DC6757A247545A40078F68B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DC6755C247545A00078F68B /* Project object */;
+}
