@@ -15,9 +15,19 @@ class MainViewController: UIViewController {
     @IBOutlet weak var listCalendar: UIButton!
     @IBOutlet var listView: UIView!
     
+    let dateFormmater: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M월 d일 EEEE"
+        dateFormatter.timeZone = TimeZone(abbreviation: "KST")
+        dateFormatter.locale = Locale(identifier: "ko-KR")
+        
+        return dateFormatter
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTime()
     }
     
     
@@ -53,6 +63,11 @@ class MainViewController: UIViewController {
         
         return calendarViewController
     }()
+    
+    func setupTime() {
+        let today = Date()
+        dateTitle.text = dateFormmater.string(from: today)
+    }
 
     
 }
