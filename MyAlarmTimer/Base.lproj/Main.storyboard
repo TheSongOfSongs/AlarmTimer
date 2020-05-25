@@ -13,6 +13,9 @@
         <array key="NotoSansKR-Medium.otf">
             <string>NotoSansKR-Medium</string>
         </array>
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--알람-->
@@ -49,7 +52,7 @@
                                     <constraint firstAttribute="height" constant="25" id="1yR-Jk-uH2"/>
                                     <constraint firstAttribute="width" constant="200" id="83e-yf-2bu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
                                 <state key="normal" title="캘린더로 보기">
                                     <color key="titleColor" red="0.3529411764705882" green="0.3529411764705882" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -145,20 +148,68 @@
             <point key="canvasLocation" x="-323" y="1002"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="wsu-KG-Uth">
+        <scene sceneID="zih-Dp-2gA">
             <objects>
-                <viewController storyboardIdentifier="Table" id="4aX-77-53M" customClass="TableViewController" customModule="MyAlarmTimer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pAA-dw-y0i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664"/>
+                <viewController storyboardIdentifier="Table" id="WtN-nQ-E5U" customClass="TableViewController" customModule="MyAlarmTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwp-Bt-Saq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GlS-zZ-Knh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EOn-UV-I0D">
+                                    <size key="itemSize" width="200" height="70"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TableCell" id="ycb-Hc-Z8W" customClass="TableCell" customModule="MyAlarmTimer" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="50" width="300" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <size key="customSize" width="300" height="50"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Iw5-BH-Ksq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-WP-N41">
+                                            <rect key="frame" x="26" y="5.5" width="48" height="39"/>
+                                            <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NOW-WP-N41" firstAttribute="leading" secondItem="Iw5-BH-Ksq" secondAttribute="leading" constant="26" id="2yE-pj-zrT"/>
+                                        <constraint firstItem="NOW-WP-N41" firstAttribute="centerY" secondItem="Iw5-BH-Ksq" secondAttribute="centerY" id="o7i-Eg-U9C"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="WtN-nQ-E5U" id="KBK-Xp-enc"/>
+                                    <outlet property="delegate" destination="WtN-nQ-E5U" id="gx9-tb-Wjx"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="pii-ef-lCq"/>
+                        <constraints>
+                            <constraint firstItem="GlS-zZ-Knh" firstAttribute="leading" secondItem="rtA-9B-J6U" secondAttribute="leading" id="H1I-mt-HMb"/>
+                            <constraint firstItem="GlS-zZ-Knh" firstAttribute="top" secondItem="rtA-9B-J6U" secondAttribute="top" id="Kp1-hu-uwZ"/>
+                            <constraint firstItem="rtA-9B-J6U" firstAttribute="trailing" secondItem="GlS-zZ-Knh" secondAttribute="trailing" id="Q6G-1c-ZT0"/>
+                            <constraint firstItem="rtA-9B-J6U" firstAttribute="bottom" secondItem="GlS-zZ-Knh" secondAttribute="bottom" id="zVS-ZB-ogS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rtA-9B-J6U"/>
                     </view>
-                    <size key="freeformSize" width="414" height="664"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bq3-9C-qtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuW-TY-JBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1490" y="1785"/>
+            <point key="canvasLocation" x="-1596" y="1780"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="BeB-SD-uL5">

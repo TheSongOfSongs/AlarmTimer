@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTime()
+        add(tableViewController, listView)
     }
     
     
@@ -44,10 +45,8 @@ class MainViewController: UIViewController {
     
     private lazy var tableViewController: TableViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let tableViewController = storyboard.instantiateViewController(identifier: "Table") as? TableViewController else {
-            return TableViewController()
-        }
-        
+        guard let tableViewController = storyboard.instantiateViewController(identifier: "Table")
+            as? TableViewController else { return TableViewController() }
         self.add(tableViewController, listView)
         
         return tableViewController
@@ -55,10 +54,8 @@ class MainViewController: UIViewController {
     
     private lazy var calendarViewController: CalendarViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let calendarViewController = storyboard.instantiateViewController(identifier: "Calendar") as? CalendarViewController else {
-            return CalendarViewController()
-        }
-        
+        guard let calendarViewController = storyboard.instantiateViewController(identifier: "Calendar")
+            as? CalendarViewController else { return CalendarViewController() }
         self.add(calendarViewController, listView)
         
         return calendarViewController

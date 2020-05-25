@@ -10,21 +10,9 @@ import UIKit
 
 class ContainerViewController: UIViewController {
     
-    
-    
-    var selectedList: Int = 0 {
-        didSet {
-            
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
-
-    
-    
     
 }
