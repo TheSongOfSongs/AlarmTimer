@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1165" y="1002"/>
+            <point key="canvasLocation" x="-1002" y="976"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="g5E-Ql-nDJ">
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkJ-0h-WC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="1002"/>
+            <point key="canvasLocation" x="-324" y="976"/>
         </scene>
         <!--설정-->
         <scene sceneID="Ueg-rV-tM8">
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6i-T2-Ni6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-323" y="1002"/>
+            <point key="canvasLocation" x="377" y="976"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="zih-Dp-2gA">
@@ -175,7 +175,7 @@
                                         <size key="customSize" width="300" height="50"/>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Iw5-BH-Ksq">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TableHeader" id="Iw5-BH-Ksq" customClass="TableHeaderView" customModule="MyAlarmTimer" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -185,11 +185,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-ph-zeS">
+                                            <rect key="frame" x="326" y="13.5" width="23" height="23"/>
+                                            <state key="normal" image="addButton"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="NOW-WP-N41" firstAttribute="leading" secondItem="Iw5-BH-Ksq" secondAttribute="leading" constant="26" id="2yE-pj-zrT"/>
+                                        <constraint firstAttribute="trailing" secondItem="TMj-ph-zeS" secondAttribute="trailing" constant="26" id="5U7-WK-aBe"/>
+                                        <constraint firstItem="TMj-ph-zeS" firstAttribute="centerY" secondItem="Iw5-BH-Ksq" secondAttribute="centerY" id="k3Q-pF-38g"/>
                                         <constraint firstItem="NOW-WP-N41" firstAttribute="centerY" secondItem="Iw5-BH-Ksq" secondAttribute="centerY" id="o7i-Eg-U9C"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="addAlarm" destination="TMj-ph-zeS" id="OAm-fR-TxI"/>
+                                        <outlet property="sectionTitle" destination="NOW-WP-N41" id="9A7-AF-7yn"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="WtN-nQ-E5U" id="KBK-Xp-enc"/>
@@ -209,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuW-TY-JBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1596" y="1780"/>
+            <point key="canvasLocation" x="-1271.2" y="1705.9970014992505"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="BeB-SD-uL5">
@@ -225,10 +235,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIa-8g-K0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-773" y="1785"/>
+            <point key="canvasLocation" x="-574" y="1706"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addButton" width="23" height="23"/>
         <image name="clock" width="25" height="21"/>
         <image name="gear" width="21" height="22"/>
         <image name="timer" width="16.5" height="18"/>

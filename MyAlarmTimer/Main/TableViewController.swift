@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewController: UIViewController {
     
+    let customAlarmViewModel = CustomAlarmViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,6 +30,10 @@ class TableCell: UICollectionViewCell {
 
 extension TableViewController: UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return customAlarmViewModel.numOfSection
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -40,6 +46,23 @@ extension TableViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TableHeader", for: indexPath) as? TableHeaderView else {
+                return UICollectionReusableView()
+            }
+            
+            guard let section = CustomAlarmViewModel.Section(rawValue: indexPath.section) else {
+                return UICollectionReusableView()
+            }
+            
+            header.sectionTitle.text = section.title
+            return header
+        default:
+            return UICollectionReusableView()
+        }
+    }
 }
 
 //extension TableViewController: UICollectionViewDelegate {
@@ -54,6 +77,5 @@ extension TableViewController: UICollectionViewDelegateFlowLayout {
         let height: CGFloat = 53
         return CGSize(width: width, height: height)
     }
-    
 }
 
