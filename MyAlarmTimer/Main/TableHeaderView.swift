@@ -10,13 +10,14 @@ import UIKit
 
 class TableHeaderView: UICollectionReusableView {
     
+    let customAlarmViewModel = CustomAlarmViewModel()
+    
     @IBOutlet weak var sectionTitle: UILabel!
     
-    @IBOutlet weak var addAlarm: UIButton!
     
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-
+    //    override func awakeFromNib() {
+    //        super.awakeFromNib()
+    //    }
+    
 }

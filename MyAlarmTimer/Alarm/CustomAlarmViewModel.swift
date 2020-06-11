@@ -34,5 +34,19 @@ class CustomAlarmViewModel {
     func loadAlarms() {
         manager.retrieveTodo()
     }
+    
+    func alarmCount(sectionValue: Int) -> Int {
+        let section = Section.init(rawValue: sectionValue)
+        
+        if section == .today {
+            return manager.alarms.filter({$0.isToday}).count
+        } else {
+            return manager.alarms.filter({!$0.isToday}).count
+        }
+    }
+    
+    func createAlarm(title: String, hour: Int, min: Int, sec: Int, isToday: Bool) -> CustomAlarm {
+        return manager.createAlarm(title: title, hour: hour, min: min, sec: sec, isToday: isToday)
+    }
 }
 

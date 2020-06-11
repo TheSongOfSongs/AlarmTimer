@@ -12,6 +12,9 @@
 		4DAEACCA247BF9D80089C7A2 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEACC9247BF9D80089C7A2 /* Storage.swift */; };
 		4DAEACCC247BFA1D0089C7A2 /* CustomAlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEACCB247BFA1D0089C7A2 /* CustomAlarmViewModel.swift */; };
 		4DAEACCE247CC8640089C7A2 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEACCD247CC8640089C7A2 /* TableHeaderView.swift */; };
+		4DAEACF3247FECDF0089C7A2 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEACF2247FECDF0089C7A2 /* TableCell.swift */; };
+		4DAEACF5247FED0A0089C7A2 /* ExtensionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEACF4247FED0A0089C7A2 /* ExtensionTableViewController.swift */; };
+		4DAEAD172480EE2E0089C7A2 /* NewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAD162480EE2E0089C7A2 /* NewAlarmViewController.swift */; };
 		4DC67568247545A00078F68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC67567247545A00078F68B /* AppDelegate.swift */; };
 		4DC6756A247545A00078F68B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC67569247545A00078F68B /* SceneDelegate.swift */; };
 		4DC6756C247545A00078F68B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6756B247545A00078F68B /* MainViewController.swift */; };
@@ -35,6 +38,9 @@
 		4DAEACC9247BF9D80089C7A2 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		4DAEACCB247BFA1D0089C7A2 /* CustomAlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlarmViewModel.swift; sourceTree = "<group>"; };
 		4DAEACCD247CC8640089C7A2 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		4DAEACF2247FECDF0089C7A2 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		4DAEACF4247FED0A0089C7A2 /* ExtensionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTableViewController.swift; sourceTree = "<group>"; };
+		4DAEAD162480EE2E0089C7A2 /* NewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlarmViewController.swift; sourceTree = "<group>"; };
 		4DC67564247545A00078F68B /* MyAlarmTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlarmTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC67567247545A00078F68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC67569247545A00078F68B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,18 @@
 				4DAEACCB247BFA1D0089C7A2 /* CustomAlarmViewModel.swift */,
 			);
 			path = Alarm;
+			sourceTree = "<group>";
+		};
+		4DAEACF1247FECC10089C7A2 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6758924763DDA0078F68B /* TableViewController.swift */,
+				4DAEACF4247FED0A0089C7A2 /* ExtensionTableViewController.swift */,
+				4DAEACCD247CC8640089C7A2 /* TableHeaderView.swift */,
+				4DAEACF2247FECDF0089C7A2 /* TableCell.swift */,
+				4DAEAD162480EE2E0089C7A2 /* NewAlarmViewController.swift */,
+			);
+			name = Table;
 			sourceTree = "<group>";
 		};
 		4DC6755B247545A00078F68B = {
@@ -124,9 +142,8 @@
 		4DC6758824763DC10078F68B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4DAEACF1247FECC10089C7A2 /* Table */,
 				4DC6756B247545A00078F68B /* MainViewController.swift */,
-				4DC6758924763DDA0078F68B /* TableViewController.swift */,
-				4DAEACCD247CC8640089C7A2 /* TableHeaderView.swift */,
 				4DC6758B24763E340078F68B /* CalendarViewController.swift */,
 				4DC6758D247642920078F68B /* ContainerViewController.swift */,
 			);
@@ -214,9 +231,12 @@
 				4DC6756C247545A00078F68B /* MainViewController.swift in Sources */,
 				4DC67568247545A00078F68B /* AppDelegate.swift in Sources */,
 				4DAEACCC247BFA1D0089C7A2 /* CustomAlarmViewModel.swift in Sources */,
+				4DAEACF5247FED0A0089C7A2 /* ExtensionTableViewController.swift in Sources */,
 				4DC6758A24763DDA0078F68B /* TableViewController.swift in Sources */,
 				4DAEACCE247CC8640089C7A2 /* TableHeaderView.swift in Sources */,
+				4DAEACF3247FECDF0089C7A2 /* TableCell.swift in Sources */,
 				4DC6758E247642920078F68B /* ContainerViewController.swift in Sources */,
+				4DAEAD172480EE2E0089C7A2 /* NewAlarmViewController.swift in Sources */,
 				4DAEACCA247BF9D80089C7A2 /* Storage.swift in Sources */,
 				4DAEACC6247BF9010089C7A2 /* CustomAlarm.swift in Sources */,
 				4DAEACC8247BF9250089C7A2 /* CustomAlarmManager.swift in Sources */,

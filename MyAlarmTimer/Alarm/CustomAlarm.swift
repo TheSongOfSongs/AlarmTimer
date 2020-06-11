@@ -7,12 +7,14 @@ struct CustomAlarm: Codable, Equatable {
     var hour: Int
     var min: Int
     var sec: Int
+    var isToday: Bool
     
-    mutating func update(title: String, hour: Int, min: Int, sec: Int) {
+    mutating func update(title: String, hour: Int, min: Int, sec: Int, isToday: Bool) {
         self.title = title
         self.hour = hour
         self.min = min
         self.sec = sec
+        self.isToday = isToday
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {

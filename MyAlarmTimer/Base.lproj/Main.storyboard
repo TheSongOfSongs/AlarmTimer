@@ -188,6 +188,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-ph-zeS">
                                             <rect key="frame" x="326" y="13.5" width="23" height="23"/>
                                             <state key="normal" image="addButton"/>
+                                            <connections>
+                                                <action selector="createAlarm:" destination="WtN-nQ-E5U" eventType="touchUpInside" id="RwD-GF-tWj"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -197,7 +200,6 @@
                                         <constraint firstItem="NOW-WP-N41" firstAttribute="centerY" secondItem="Iw5-BH-Ksq" secondAttribute="centerY" id="o7i-Eg-U9C"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="addAlarm" destination="TMj-ph-zeS" id="OAm-fR-TxI"/>
                                         <outlet property="sectionTitle" destination="NOW-WP-N41" id="9A7-AF-7yn"/>
                                     </connections>
                                 </collectionReusableView>
@@ -220,6 +222,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuW-TY-JBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1271.2" y="1705.9970014992505"/>
+        </scene>
+        <!--New Alarm View Controller-->
+        <scene sceneID="LGU-Bh-A6O">
+            <objects>
+                <viewController storyboardIdentifier="newAlarm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="twY-7f-VyT" customClass="NewAlarmViewController" customModule="MyAlarmTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qge-oX-WAh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQJ-Xo-NZu">
+                                <rect key="frame" x="67" y="125" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rNN-hX-AF9"/>
+                    </view>
+                    <connections>
+                        <outlet property="squareLabel" destination="WQJ-Xo-NZu" id="3G3-9H-Ic3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXT-gh-M1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="2379"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="BeB-SD-uL5">

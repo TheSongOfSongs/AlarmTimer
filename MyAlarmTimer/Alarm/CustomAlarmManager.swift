@@ -11,10 +11,10 @@ class CustomAlarmManager {
     
     var alarms: [CustomAlarm] = []
     
-    func createAlarm(title: String, hour: Int, min: Int, sec: Int) -> CustomAlarm {
+    func createAlarm(title: String, hour: Int, min: Int, sec: Int, isToday: Bool) -> CustomAlarm {
         CustomAlarmManager.lastId += 1
         let id: Int = CustomAlarmManager.lastId
-        return CustomAlarm(id: id, title: title, hour: hour, min: min, sec: sec)
+        return CustomAlarm(id: id, title: title, hour: hour, min: min, sec: sec, isToday: isToday)
     }
     
     func addAlarm(_ alarm: CustomAlarm) {
