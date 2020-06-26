@@ -6,13 +6,13 @@ class CustomAlarmViewModel {
     enum Section: Int, CaseIterable {
         case everyday
         case today
-        
+
         var title: String {
             switch self {
             case .everyday:
-                return "오늘"
-            default:
                 return "매일"
+            default:
+                return "오늘"
             }
         }
     }

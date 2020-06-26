@@ -10,28 +10,19 @@ import UIKit
 
 class NewAlarmViewController: UIViewController {
     
-    @IBOutlet weak var squareLabel: UIView!
+    @IBOutlet weak var popUpView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setSquareBorder()
+        
+        setPopUpView()
     }
     
-    func setSquareBorder() {
-        let borderColor = UIColor(red: 0.54, green: 0.714, blue: 0.975, alpha: 1).cgColor
-        let squareFrame = self.squareLabel.frame
+    func setPopUpView() {
+        let width = self.view.frame.width - 20 * 2
+        let height = CGFloat(280)
         
-        let topBorder = CALayer()
-        topBorder.frame = CGRect(x: 0.0, y: 0.0, width: squareFrame.width, height: 2)
-        topBorder.backgroundColor = borderColor
-        
-        let bottomBorder = CALayer()
-        bottomBorder.frame = CGRect(x: 0, y: squareFrame.height, width: squareFrame.width, height: 2)
-        bottomBorder.backgroundColor = borderColor
-        
-        squareLabel.layer.addSublayer(topBorder)
-        squareLabel.layer.addSublayer(bottomBorder)
+        popUpView.frame = CGRect(x: 20, y: 191, width: width, height: height)
     }
-
 }
+

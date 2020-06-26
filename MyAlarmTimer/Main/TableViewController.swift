@@ -16,10 +16,9 @@ class TableViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let newAlarmViewController = storyboard.instantiateViewController(identifier: "newAlarm") as? NewAlarmViewController else { return }
         
-        newAlarmViewController.modalPresentationStyle = .fullScreen
-//        self.present(newAlarmViewController, animated: true, completion: nil)
+        newAlarmViewController.modalPresentationStyle = .overCurrentContext
         
-
+        self.present(newAlarmViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NotoSansKR-Black.otf">
+            <string>NotoSansKR-Black</string>
+        </array>
         <array key="NotoSansKR-Bold.otf">
             <string>NotoSansKR-Bold</string>
         </array>
@@ -180,7 +183,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-WP-N41">
-                                            <rect key="frame" x="26" y="5.5" width="48" height="39"/>
+                                            <rect key="frame" x="26" y="10" width="45" height="30.5"/>
                                             <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -231,22 +234,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQJ-Xo-NZu">
-                                <rect key="frame" x="67" y="125" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bH-GE-gyK">
+                                <rect key="frame" x="20" y="84" width="335" height="306"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="tVT-El-zMd" kind="embed" id="hzM-KO-z7y"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rNN-hX-AF9"/>
                     </view>
                     <connections>
-                        <outlet property="squareLabel" destination="WQJ-Xo-NZu" id="3G3-9H-Ic3"/>
+                        <outlet property="popUpView" destination="4bH-GE-gyK" id="ajo-H5-VoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXT-gh-M1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1271" y="2379"/>
+            <point key="canvasLocation" x="-1271.2" y="2378.8605697151424"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="BeB-SD-uL5">
@@ -263,6 +268,208 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIa-8g-K0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-574" y="1706"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="7bP-dx-hfz">
+            <objects>
+                <viewController id="tVT-El-zMd" customClass="PopUpViewController" customModule="MyAlarmTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0j-rk-TTw">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="306"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl9-5B-sva">
+                                <rect key="frame" x="27" y="60" width="281" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-Qc-FqJ">
+                                        <rect key="frame" x="238.5" y="13.5" width="17.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="20"/>
+                                        <color key="textColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-Cm-5kp">
+                                        <rect key="frame" x="147" y="13.5" width="17.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="20"/>
+                                        <color key="textColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-e7-uTL">
+                                        <rect key="frame" x="85" y="12.5" width="54" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="0tg-GS-wNl"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hhP-bP-ojT">
+                                        <rect key="frame" x="176.5" y="12.5" width="54" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="LtO-FM-u1U"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDG-w1-qZz">
+                                        <rect key="frame" x="10" y="7" width="31" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="AM">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0iu-El-KCM"/>
+                                    <constraint firstItem="xwK-Qc-FqJ" firstAttribute="centerY" secondItem="Vl9-5B-sva" secondAttribute="centerY" id="2ru-9w-UgK"/>
+                                    <constraint firstItem="mJd-Cm-5kp" firstAttribute="centerX" secondItem="Vl9-5B-sva" secondAttribute="centerX" constant="15" id="HDr-c8-5i2"/>
+                                    <constraint firstItem="xwK-Qc-FqJ" firstAttribute="leading" secondItem="hhP-bP-ojT" secondAttribute="trailing" constant="8" id="I4E-Cp-wuB"/>
+                                    <constraint firstItem="iDG-w1-qZz" firstAttribute="leading" secondItem="Vl9-5B-sva" secondAttribute="leading" constant="10" id="Mhz-I2-8uz"/>
+                                    <constraint firstItem="iDG-w1-qZz" firstAttribute="centerY" secondItem="Vl9-5B-sva" secondAttribute="centerY" id="Nk2-fk-wvE"/>
+                                    <constraint firstItem="hhP-bP-ojT" firstAttribute="centerY" secondItem="Vl9-5B-sva" secondAttribute="centerY" id="Th5-8w-bhH"/>
+                                    <constraint firstItem="mJd-Cm-5kp" firstAttribute="centerY" secondItem="Vl9-5B-sva" secondAttribute="centerY" id="XdF-Yj-v1N"/>
+                                    <constraint firstAttribute="trailing" secondItem="xwK-Qc-FqJ" secondAttribute="trailing" constant="25" id="cDa-Af-UCr"/>
+                                    <constraint firstItem="mJd-Cm-5kp" firstAttribute="leading" secondItem="W5y-e7-uTL" secondAttribute="trailing" constant="8" id="fcj-f0-Rmu"/>
+                                    <constraint firstItem="W5y-e7-uTL" firstAttribute="centerY" secondItem="mJd-Cm-5kp" secondAttribute="centerY" id="h1b-ac-fyr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vM-Sv-6XI">
+                                <rect key="frame" x="27" y="195" width="281" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-Dh-54p">
+                                        <rect key="frame" x="88.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="수">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR2-u9-mlH">
+                                        <rect key="frame" x="51.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="화">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ide-0H-Ucr">
+                                        <rect key="frame" x="14.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="월">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNY-Ce-dEw">
+                                        <rect key="frame" x="162.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="금">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-3D-yrd">
+                                        <rect key="frame" x="236.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="일">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHS-x6-XmP">
+                                        <rect key="frame" x="199.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="토">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-Af-QCu">
+                                        <rect key="frame" x="125.5" y="2" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
+                                        <state key="normal" title="목">
+                                            <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92192143199999999" green="0.95238071680000003" blue="0.99554926160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Rd-mT-VND"/>
+                                    <constraint firstItem="WvK-Dh-54p" firstAttribute="leading" secondItem="kR2-u9-mlH" secondAttribute="trailing" constant="7" id="6au-Y6-VHO"/>
+                                    <constraint firstItem="psJ-3D-yrd" firstAttribute="leading" secondItem="UHS-x6-XmP" secondAttribute="trailing" constant="7" id="ApF-Sp-gV4"/>
+                                    <constraint firstItem="wkx-Af-QCu" firstAttribute="centerY" secondItem="1vM-Sv-6XI" secondAttribute="centerY" id="DKz-L1-Qip"/>
+                                    <constraint firstItem="kR2-u9-mlH" firstAttribute="centerY" secondItem="WvK-Dh-54p" secondAttribute="centerY" id="GcE-0j-YhS"/>
+                                    <constraint firstItem="WvK-Dh-54p" firstAttribute="centerY" secondItem="wkx-Af-QCu" secondAttribute="centerY" id="MUz-oh-BjG"/>
+                                    <constraint firstItem="UHS-x6-XmP" firstAttribute="leading" secondItem="KNY-Ce-dEw" secondAttribute="trailing" constant="7" id="QAm-LJ-Esm"/>
+                                    <constraint firstItem="ide-0H-Ucr" firstAttribute="centerY" secondItem="kR2-u9-mlH" secondAttribute="centerY" id="SIE-OL-lEj"/>
+                                    <constraint firstItem="wkx-Af-QCu" firstAttribute="leading" secondItem="WvK-Dh-54p" secondAttribute="trailing" constant="7" id="Vhw-ko-WmO"/>
+                                    <constraint firstItem="UHS-x6-XmP" firstAttribute="centerY" secondItem="KNY-Ce-dEw" secondAttribute="centerY" id="YLY-XD-9fU"/>
+                                    <constraint firstItem="wkx-Af-QCu" firstAttribute="centerX" secondItem="1vM-Sv-6XI" secondAttribute="centerX" id="bVO-Co-wZo"/>
+                                    <constraint firstItem="kR2-u9-mlH" firstAttribute="leading" secondItem="ide-0H-Ucr" secondAttribute="trailing" constant="7" id="dAk-dR-9S1"/>
+                                    <constraint firstItem="KNY-Ce-dEw" firstAttribute="centerY" secondItem="wkx-Af-QCu" secondAttribute="centerY" id="hi6-tE-RdW"/>
+                                    <constraint firstItem="psJ-3D-yrd" firstAttribute="centerY" secondItem="UHS-x6-XmP" secondAttribute="centerY" id="kQt-xx-heB"/>
+                                    <constraint firstItem="KNY-Ce-dEw" firstAttribute="leading" secondItem="wkx-Af-QCu" secondAttribute="trailing" constant="7" id="tg2-kP-UDh"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="알람 이름을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-kn-GSe">
+                                <rect key="frame" x="25" y="16" width="294" height="29.5"/>
+                                <color key="textColor" red="0.1285711527" green="0.12859603759999999" blue="0.1285656989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujD-HF-lnl">
+                                <rect key="frame" x="37" y="113" width="35" height="36"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
+                                <state key="normal" title="소리">
+                                    <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-L6-Bpj">
+                                <rect key="frame" x="37" y="151" width="35" height="36"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
+                                <state key="normal" title="반복">
+                                    <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-ay-e6p">
+                                <rect key="frame" x="92" y="113" width="35" height="36"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
+                                <state key="normal" title="소리">
+                                    <color key="titleColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctn-rO-4E5">
+                                <rect key="frame" x="92" y="151" width="75" height="36"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
+                                <state key="normal" title="반복 안함">
+                                    <color key="titleColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1vM-Sv-6XI" firstAttribute="leading" secondItem="Vl9-5B-sva" secondAttribute="leading" id="B8i-60-cHs"/>
+                            <constraint firstItem="0fa-kn-GSe" firstAttribute="leading" secondItem="U0j-rk-TTw" secondAttribute="leading" constant="25" id="ERy-56-YbL"/>
+                            <constraint firstItem="ujD-HF-lnl" firstAttribute="top" secondItem="iDG-w1-qZz" secondAttribute="bottom" constant="10" id="G52-Se-ykd"/>
+                            <constraint firstItem="Vl9-5B-sva" firstAttribute="top" secondItem="U0j-rk-TTw" secondAttribute="top" constant="60" id="Meh-xA-p3o"/>
+                            <constraint firstAttribute="trailing" secondItem="0fa-kn-GSe" secondAttribute="trailing" constant="16" id="PvU-DQ-BqD"/>
+                            <constraint firstItem="0fa-kn-GSe" firstAttribute="top" secondItem="U0j-rk-TTw" secondAttribute="top" constant="16" id="S0e-Ew-PvP"/>
+                            <constraint firstItem="ujD-HF-lnl" firstAttribute="leading" secondItem="iDG-w1-qZz" secondAttribute="leading" id="Zi0-g6-WyX"/>
+                            <constraint firstAttribute="trailing" secondItem="Vl9-5B-sva" secondAttribute="trailing" constant="27" id="bNK-h1-29I"/>
+                            <constraint firstItem="Vl9-5B-sva" firstAttribute="leading" secondItem="U0j-rk-TTw" secondAttribute="leading" constant="27" id="bQL-Wl-VvH"/>
+                            <constraint firstItem="ctn-rO-4E5" firstAttribute="centerY" secondItem="SeR-L6-Bpj" secondAttribute="centerY" id="doE-ke-JY1"/>
+                            <constraint firstItem="SeR-L6-Bpj" firstAttribute="leading" secondItem="ujD-HF-lnl" secondAttribute="leading" id="e8l-mr-5xk"/>
+                            <constraint firstItem="SeR-L6-Bpj" firstAttribute="top" secondItem="ujD-HF-lnl" secondAttribute="bottom" constant="2" id="ebW-FZ-Oeh"/>
+                            <constraint firstItem="2WW-ay-e6p" firstAttribute="leading" secondItem="ujD-HF-lnl" secondAttribute="trailing" constant="20" id="gBX-pU-WNI"/>
+                            <constraint firstItem="ctn-rO-4E5" firstAttribute="leading" secondItem="SeR-L6-Bpj" secondAttribute="trailing" constant="20" id="glL-JZ-xLu"/>
+                            <constraint firstItem="2WW-ay-e6p" firstAttribute="centerY" secondItem="ujD-HF-lnl" secondAttribute="centerY" id="l6u-N3-coJ"/>
+                            <constraint firstItem="1vM-Sv-6XI" firstAttribute="trailing" secondItem="Vl9-5B-sva" secondAttribute="trailing" id="oFO-at-67Z"/>
+                            <constraint firstItem="1vM-Sv-6XI" firstAttribute="top" secondItem="SeR-L6-Bpj" secondAttribute="bottom" constant="8" id="ywf-dn-mvk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alarmTitle" destination="0fa-kn-GSe" id="akN-DJ-q3o"/>
+                        <outlet property="dayView" destination="1vM-Sv-6XI" id="zdV-D6-isd"/>
+                        <outlet property="timeView" destination="Vl9-5B-sva" id="6ko-LW-fq7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ude-y9-tEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-535.20000000000005" y="2291.1544227886061"/>
         </scene>
     </scenes>
     <resources>
