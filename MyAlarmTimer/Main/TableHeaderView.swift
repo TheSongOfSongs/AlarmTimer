@@ -10,8 +10,8 @@ import UIKit
 
 class TableHeaderView: UICollectionReusableView {
     
-    let customAlarmViewModel = CustomAlarmViewModel()
-    
     @IBOutlet weak var sectionTitle: UILabel!
+    
+    let customAlarmViewModel = CustomAlarmViewModel()
     
 }

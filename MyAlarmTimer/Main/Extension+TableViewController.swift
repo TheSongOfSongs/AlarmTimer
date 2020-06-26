@@ -7,7 +7,7 @@ extension TableViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 10
 //        return customAlarmViewModel.alarmCount(sectionValue: section)
     }
     

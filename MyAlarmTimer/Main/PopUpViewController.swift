@@ -15,8 +15,7 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet weak var alarmTitle: UITextField!
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +58,4 @@ class PopUpViewController: UIViewController {
     func setDayView() {
         dayView.layer.cornerRadius = 14
     }
-    
-    
 }

@@ -47,6 +47,8 @@ class MainViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let tableViewController = storyboard.instantiateViewController(identifier: "Table")
             as? TableViewController else { return TableViewController() }
+        tableViewController.viewSize = self.listView.frame.size
+        
         self.add(tableViewController, listView)
         
         return tableViewController
@@ -65,8 +67,6 @@ class MainViewController: UIViewController {
         let today = Date()
         dateTitle.text = dateFormmater.string(from: today)
     }
-
-    
 }
 
 extension UIViewController {

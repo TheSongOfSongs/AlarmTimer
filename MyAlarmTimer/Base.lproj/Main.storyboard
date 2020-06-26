@@ -63,24 +63,23 @@
                                     <action selector="listCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kOi-d8-QZ8"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHm-L1-W53">
-                                <rect key="frame" x="0.0" y="107" width="375" height="511"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnq-pb-ftM">
+                                <rect key="frame" x="0.0" y="196" width="430" height="521"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nvV-kW-5zK" firstAttribute="top" secondItem="Xpg-0E-x0J" secondAttribute="bottom" constant="7" id="1M2-zS-qDc"/>
                             <constraint firstItem="nvV-kW-5zK" firstAttribute="leading" secondItem="g7E-cB-FeP" secondAttribute="trailing" constant="20" id="86l-1d-wnc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RHm-L1-W53" secondAttribute="trailing" id="ApZ-D8-bZW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RHm-L1-W53" secondAttribute="bottom" id="IOc-dr-DyE"/>
-                            <constraint firstItem="RHm-L1-W53" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MF2-9u-gtu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pnq-pb-ftM" secondAttribute="bottom" id="A7D-Oh-vj5"/>
                             <constraint firstItem="g7E-cB-FeP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Rju-zu-v6V"/>
-                            <constraint firstItem="RHm-L1-W53" firstAttribute="top" secondItem="g7E-cB-FeP" secondAttribute="bottom" constant="10" id="Ue2-TC-6OV"/>
                             <constraint firstItem="Xpg-0E-x0J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="eEt-6T-gts"/>
+                            <constraint firstItem="pnq-pb-ftM" firstAttribute="top" secondItem="g7E-cB-FeP" secondAttribute="bottom" id="geB-Ow-5Mo"/>
                             <constraint firstItem="Xpg-0E-x0J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="hsw-32-BMo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pnq-pb-ftM" secondAttribute="trailing" id="rmj-lI-zQO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpg-0E-x0J" secondAttribute="trailing" constant="53" id="sbE-LR-8tS"/>
                             <constraint firstItem="g7E-cB-FeP" firstAttribute="top" secondItem="Xpg-0E-x0J" secondAttribute="bottom" constant="8" id="t6D-ow-KZX"/>
+                            <constraint firstItem="pnq-pb-ftM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xlI-EX-WLZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -89,7 +88,7 @@
                         <outlet property="dateTitle" destination="Xpg-0E-x0J" id="WM3-gN-hJF"/>
                         <outlet property="listCalendar" destination="nvV-kW-5zK" id="Myh-cj-6Lt"/>
                         <outlet property="listTable" destination="g7E-cB-FeP" id="DQL-ex-hg0"/>
-                        <outlet property="listView" destination="RHm-L1-W53" id="27E-tD-noD"/>
+                        <outlet property="listView" destination="pnq-pb-ftM" id="RsQ-Oc-VlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,35 +160,55 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GlS-zZ-Knh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EOn-UV-I0D">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="17" minimumInteritemSpacing="10" id="EOn-UV-I0D">
                                     <size key="itemSize" width="200" height="70"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="60"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TableCell" id="ycb-Hc-Z8W" customClass="TableCell" customModule="MyAlarmTimer" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="50" width="300" height="50"/>
+                                        <rect key="frame" x="37.5" y="60" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="재난지원금 신청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytW-de-4z5">
+                                                    <rect key="frame" x="20" y="7" width="161.5" height="36"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="24"/>
+                                                    <color key="textColor" red="0.1285711527" green="0.12859603759999999" blue="0.1285656989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spe-3d-vSU">
+                                                    <rect key="frame" x="197" y="7" width="92" height="36"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="24"/>
+                                                    <color key="textColor" red="0.54034179449999997" green="0.7126008868" blue="0.97813957929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="spe-3d-vSU" secondAttribute="trailing" constant="11" id="D7c-by-O4d"/>
+                                            <constraint firstItem="ytW-de-4z5" firstAttribute="leading" secondItem="ycb-Hc-Z8W" secondAttribute="leading" constant="20" id="FOy-h9-ERq"/>
+                                            <constraint firstItem="spe-3d-vSU" firstAttribute="centerY" secondItem="ycb-Hc-Z8W" secondAttribute="centerY" id="MtE-eT-eQf"/>
+                                            <constraint firstItem="ytW-de-4z5" firstAttribute="centerY" secondItem="ycb-Hc-Z8W" secondAttribute="centerY" id="Ovl-9R-bKG"/>
+                                        </constraints>
                                         <size key="customSize" width="300" height="50"/>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TableHeader" id="Iw5-BH-Ksq" customClass="TableHeaderView" customModule="MyAlarmTimer" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOW-WP-N41">
-                                            <rect key="frame" x="26" y="10" width="45" height="30.5"/>
+                                            <rect key="frame" x="26" y="10.5" width="249" height="39"/>
                                             <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-ph-zeS">
-                                            <rect key="frame" x="326" y="13.5" width="23" height="23"/>
+                                            <rect key="frame" x="326" y="18.5" width="23" height="23"/>
                                             <state key="normal" image="addButton"/>
                                             <connections>
                                                 <action selector="createAlarm:" destination="WtN-nQ-E5U" eventType="touchUpInside" id="RwD-GF-tWj"/>
@@ -200,6 +219,7 @@
                                         <constraint firstItem="NOW-WP-N41" firstAttribute="leading" secondItem="Iw5-BH-Ksq" secondAttribute="leading" constant="26" id="2yE-pj-zrT"/>
                                         <constraint firstAttribute="trailing" secondItem="TMj-ph-zeS" secondAttribute="trailing" constant="26" id="5U7-WK-aBe"/>
                                         <constraint firstItem="TMj-ph-zeS" firstAttribute="centerY" secondItem="Iw5-BH-Ksq" secondAttribute="centerY" id="k3Q-pF-38g"/>
+                                        <constraint firstAttribute="trailing" secondItem="NOW-WP-N41" secondAttribute="trailing" constant="100" id="luZ-yL-oTt"/>
                                         <constraint firstItem="NOW-WP-N41" firstAttribute="centerY" secondItem="Iw5-BH-Ksq" secondAttribute="centerY" id="o7i-Eg-U9C"/>
                                     </constraints>
                                     <connections>
@@ -221,10 +241,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rtA-9B-J6U"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuW-TY-JBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1271.2" y="1705.9970014992505"/>
+            <point key="canvasLocation" x="-1205" y="1704"/>
         </scene>
         <!--New Alarm View Controller-->
         <scene sceneID="LGU-Bh-A6O">
@@ -251,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXT-gh-M1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1271.2" y="2378.8605697151424"/>
+            <point key="canvasLocation" x="-1324" y="2502"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="BeB-SD-uL5">
@@ -267,11 +288,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIa-8g-K0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="1706"/>
+            <point key="canvasLocation" x="-261" y="1704"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="7bP-dx-hfz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ude-y9-tEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="tVT-El-zMd" customClass="PopUpViewController" customModule="MyAlarmTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0j-rk-TTw">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="306"/>
@@ -281,19 +303,19 @@
                                 <rect key="frame" x="27" y="60" width="281" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-Qc-FqJ">
-                                        <rect key="frame" x="238.5" y="13.5" width="17.5" height="23.5"/>
+                                        <rect key="frame" x="237.5" y="10" width="18.5" height="30"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="20"/>
                                         <color key="textColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-Cm-5kp">
-                                        <rect key="frame" x="147" y="13.5" width="17.5" height="23.5"/>
+                                        <rect key="frame" x="146" y="10" width="19" height="30"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="20"/>
                                         <color key="textColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-e7-uTL">
-                                        <rect key="frame" x="85" y="12.5" width="54" height="25"/>
+                                        <rect key="frame" x="84" y="9.5" width="54" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="0tg-GS-wNl"/>
                                         </constraints>
@@ -302,7 +324,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hhP-bP-ojT">
-                                        <rect key="frame" x="176.5" y="12.5" width="54" height="25"/>
+                                        <rect key="frame" x="175.5" y="9.5" width="54" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="LtO-FM-u1U"/>
                                         </constraints>
@@ -311,7 +333,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDG-w1-qZz">
-                                        <rect key="frame" x="10" y="7" width="31" height="36"/>
+                                        <rect key="frame" x="10" y="4" width="31" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="AM">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -334,52 +356,52 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vM-Sv-6XI">
-                                <rect key="frame" x="27" y="195" width="281" height="40"/>
+                                <rect key="frame" x="27" y="210" width="281" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-Dh-54p">
-                                        <rect key="frame" x="88.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="88.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="수">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR2-u9-mlH">
-                                        <rect key="frame" x="51.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="51.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="화">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ide-0H-Ucr">
-                                        <rect key="frame" x="14.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="14.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="월">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNY-Ce-dEw">
-                                        <rect key="frame" x="162.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="162.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="금">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-3D-yrd">
-                                        <rect key="frame" x="236.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="236.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="일">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHS-x6-XmP">
-                                        <rect key="frame" x="199.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="199.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="토">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-Af-QCu">
-                                        <rect key="frame" x="125.5" y="2" width="30" height="36"/>
+                                        <rect key="frame" x="125.5" y="-1" width="30" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                         <state key="normal" title="목">
                                             <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -406,34 +428,37 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="알람 이름을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-kn-GSe">
-                                <rect key="frame" x="25" y="16" width="294" height="29.5"/>
+                                <rect key="frame" x="25" y="16" width="294" height="37.5"/>
                                 <color key="textColor" red="0.1285711527" green="0.12859603759999999" blue="0.1285656989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujD-HF-lnl">
-                                <rect key="frame" x="37" y="113" width="35" height="36"/>
+                                <rect key="frame" x="37" y="116" width="38" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="uT7-C6-luN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
                                 <state key="normal" title="소리">
                                     <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-L6-Bpj">
-                                <rect key="frame" x="37" y="151" width="35" height="36"/>
+                                <rect key="frame" x="37" y="160" width="37" height="42"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="20"/>
                                 <state key="normal" title="반복">
                                     <color key="titleColor" red="0.57546967270000005" green="0.70987409349999997" blue="0.95690006019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-ay-e6p">
-                                <rect key="frame" x="92" y="113" width="35" height="36"/>
+                                <rect key="frame" x="95" y="116" width="37" height="42"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
                                 <state key="normal" title="소리">
                                     <color key="titleColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctn-rO-4E5">
-                                <rect key="frame" x="92" y="151" width="75" height="36"/>
+                                <rect key="frame" x="94" y="160" width="80" height="42"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="20"/>
                                 <state key="normal" title="반복 안함">
                                     <color key="titleColor" red="0.35293644670000002" green="0.35293874139999998" blue="0.3529446423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -458,8 +483,10 @@
                             <constraint firstItem="ctn-rO-4E5" firstAttribute="leading" secondItem="SeR-L6-Bpj" secondAttribute="trailing" constant="20" id="glL-JZ-xLu"/>
                             <constraint firstItem="2WW-ay-e6p" firstAttribute="centerY" secondItem="ujD-HF-lnl" secondAttribute="centerY" id="l6u-N3-coJ"/>
                             <constraint firstItem="1vM-Sv-6XI" firstAttribute="trailing" secondItem="Vl9-5B-sva" secondAttribute="trailing" id="oFO-at-67Z"/>
+                            <constraint firstItem="SeR-L6-Bpj" firstAttribute="width" secondItem="ujD-HF-lnl" secondAttribute="width" multiplier="0.973684" id="qHp-oN-ozs"/>
                             <constraint firstItem="1vM-Sv-6XI" firstAttribute="top" secondItem="SeR-L6-Bpj" secondAttribute="bottom" constant="8" id="ywf-dn-mvk"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Atx-eE-Wq0"/>
                     </view>
                     <connections>
                         <outlet property="alarmTitle" destination="0fa-kn-GSe" id="akN-DJ-q3o"/>
@@ -467,9 +494,8 @@
                         <outlet property="timeView" destination="Vl9-5B-sva" id="6ko-LW-fq7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ude-y9-tEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535.20000000000005" y="2291.1544227886061"/>
+            <point key="canvasLocation" x="-564" y="2394"/>
         </scene>
     </scenes>
     <resources>
